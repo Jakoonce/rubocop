@@ -592,6 +592,8 @@ module RuboCop
 
       msg += "\nSupported versions: #{KNOWN_RUBIES.join(', ')}"
 
+      msg += "\nNewer RuboCop versions might support Ruby #{target_ruby_version}."
+
       raise ValidationError, msg
     end
 

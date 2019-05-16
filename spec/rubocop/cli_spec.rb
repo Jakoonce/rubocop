@@ -1646,6 +1646,10 @@ RSpec.describe RuboCop::CLI, :isolated_environment do
         expect($stderr.string.strip).to match(
           /Supported versions: 2.2, 2.3, 2.4/
         )
+
+        expect($stderr.string.strip).to match(
+          /Newer RuboCop versions might support Ruby 2.0./
+        )
       end
     end
   end
